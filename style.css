@@ -1,0 +1,162 @@
+/* Estilos gerais do corpo da página */
+body {
+    background-color: #4d4d4d; /* Cinza 90% */
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700; /* Fonte em negrito */
+    color: greenyellow; /* Texto preto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    overflow: hidden; /* Evita rolagem da página */
+    text-transform: uppercase; /* Todo o texto em caixa alta */
+    position: relative; /* Para posicionamento absoluto do botão */
+}
+
+/* Container para o poema */
+.poem-container {
+    width: 100%; /* Largura total da tela */
+    white-space: nowrap; /* Mantém as estrofes em uma linha */
+    overflow: hidden; /* Esconde qualquer conteúdo extra fora da tela */
+}
+
+/* Estilos para o poema */
+.poem {
+    font-size: 4vw; /* Tamanho da fonte relativo à largura da viewport */
+    line-height: 1.2; /* Espaçamento mínimo entre linhas para legibilidade */
+    padding-right: 5vw; /* Espaçamento entre as estrofes */
+    animation: scroll 60s linear infinite; /* Animação linear infinita */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Inicia o texto alinhado à esquerda */
+    }
+    100% {
+        transform: translateX(-100%); /* Move o texto para a esquerda */
+    }
+}
+
+/* Estilos básicos das fotos */
+.photo {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito de hover nas fotos */
+.photo:hover {
+    transform: scale(2); /* Aumenta para o dobro do tamanho original */
+    z-index: 1; /* Coloca a imagem sobre o texto */
+}
+
+/* Animação contínua de rotação em torno do eixo Y */
+@keyframes rotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Estilo para cada foto com duração de animação variável */
+.photo:nth-child(1) {
+    top: 5%;
+    left: 5%;
+    animation: rotateY 15s infinite linear;
+}
+
+.photo:nth-child(2) {
+    top: 25%;
+    left: 25%;
+    animation: rotateY 20s infinite linear;
+}
+
+.photo:nth-child(3) {
+    top: 45%;
+    left: 45%;
+    animation: rotateY 25s infinite linear;
+}
+
+.photo:nth-child(4) {
+    top: 65%;
+    left: 85%;
+    animation: rotateY 30s infinite linear;
+}
+
+.photo:nth-child(5) {
+    top: 10%;
+    left: 53%;
+    animation: rotateY 18s infinite linear;
+}
+
+.photo:nth-child(6) {
+    top: 50%;
+    left: 5%;
+    animation: rotateY 22s infinite linear;
+}
+
+.photo:nth-child(7) {
+    top: 75%;
+    left: 27%;
+    animation: rotateY 17s infinite linear;
+}
+
+.photo:nth-child(8) {
+    top: 70%;
+    left: 55%;
+    animation: rotateY 23s infinite linear;
+}
+
+.photo:nth-child(9) {
+    top: 15%;
+    left: 85%;
+    animation: rotateY 28s infinite linear;
+}
+
+.photo:nth-child(10) {
+    top: 35%;
+    left: 65%;
+    animation: rotateY 21s infinite linear;
+}
+
+/* Estilos para o botão "APPLY NOW" */
+.apply-button {
+    position: absolute;
+    bottom: 50px; /* Distância do fundo da página */
+    left: 50px; /* Distância da esquerda da página */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: black; /* Cor de fundo verde-amarelado */
+    color: greenyellow; /* Cor do texto preto */
+    font-family: 'Roboto', Arial, sans-serif; /* Fonte igual ao corpo */
+    font-weight: 700; /* Negrito */
+    text-transform: uppercase; /* Todo o texto em caixa alta */
+    border-radius: 10px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor ao passar sobre o botão */
+}
+
+/* Estilos para o contêiner da linha fixa "APPLY NOW" */
+.apply-now-container {
+    width: 100%; /* Largura total da tela */
+    overflow: hidden; /* Esconde qualquer conteúdo extra fora da tela */
+    position: fixed; /* Fixa o contêiner no topo da página */
+    top: 0; /* Alinha o contêiner ao topo */
+    left: 0; /* Alinha o contêiner à esquerda */
+    z-index: 1000; /* Garante que o texto fique acima de outros elementos */
+    background-color: #4d4d4d; /* Cor de fundo igual à cor de fundo do corpo */
+}
+
+/* Estilos para o texto "APPLY NOW" */
+.apply-now-text {
+    display: inline-block; /* Permite a rolagem contínua */
+    font-size: 4vw; /* Tamanho da fonte relativo à largura da viewport */
+    line-height: 1.2; /* Espaçamento entre linhas */
+    white-space: nowrap; /* Mantém o texto em uma linha */
+    animation: scroll 60s linear infinite; /* Aplica a mesma animação de rolagem */
+    color:rgb(255, 0, 149); /* Cor do texto */
+    text-transform: uppercase; /* Texto em caixa alta */
+    padding-right: 5vw; /* Espaçamento entre as repetições do texto */
+}
